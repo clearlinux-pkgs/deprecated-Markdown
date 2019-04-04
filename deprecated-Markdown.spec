@@ -4,7 +4,7 @@
 #
 Name     : deprecated-Markdown
 Version  : 2.6.11
-Release  : 46
+Release  : 47
 URL      : http://pypi.debian.net/Markdown/Markdown-2.6.11.tar.gz
 Source0  : http://pypi.debian.net/Markdown/Markdown-2.6.11.tar.gz
 Summary  : Python implementation of Markdown.
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554335666
+export SOURCE_DATE_EPOCH=1554341443
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -89,7 +89,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/markdown_py
+%exclude /usr/bin/markdown_py
 
 %files legacypython
 %defattr(-,root,root,-)
